@@ -1,2 +1,0 @@
-# amdb
-arkansas movie database
