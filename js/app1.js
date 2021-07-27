@@ -3,6 +3,7 @@
 const API_KEY = 'api_key=b0c478b7ead1897979ba60ad21f66ad9';
 const IMG_URL = 'https://image.tmdb.org/t/p/w500';
 const BASE_URL = 'https://api.themoviedb.org/3';
+const PERSON_URL = 'https://www.themoviedb.org/person/'
 
 var Actors = [
   1932177,
@@ -98,6 +99,14 @@ function fetch_data(id){
         
         biography_el.innerHTML += birthday
         actor.appendChild(biography_el)
+        
+        var h5 = document.createElement('h5')
+        biography_el.appendChild(h5)
+        
+        var a = document.createElement('a')
+        a.setAttribute('href', `${PERSON_URL}${id}` )
+        a.innerHTML = 'Click here to visit this movie page on TMDB'
+        h5.appendChild(a)
         
         actor_list[name] = actor
         

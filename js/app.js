@@ -180,10 +180,12 @@ function fetch_data(id) {
         movie.appendChild(overview_el)
         
         var h5 = document.createElement('h5')
-        h5.setAttribute('href', `${MOVIE_URL}${id}` )
-        h5.innerHTML = 'Click here to visit this movie page on TMDB'
         overview_el.appendChild(h5)
         
+        var a = document.createElement('a')
+        a.setAttribute('href', `${MOVIE_URL}${id}` )
+        a.innerHTML = 'Click here to visit this movie page on TMDB'
+        h5.appendChild(a)
         
         
         movie_list[title] = movie

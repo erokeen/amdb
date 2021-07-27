@@ -3,9 +3,9 @@
 const API_KEY = 'api_key=b0c478b7ead1897979ba60ad21f66ad9';
 const IMG_URL = 'https://image.tmdb.org/t/p/w500';
 const BASE_URL = 'https://api.themoviedb.org/3';
+const PERSON_URL = 'https://www.themoviedb.org/person/'
 
 var Actresses = [
-  103078,
   107445,
   6735,
   171167,
@@ -22,7 +22,6 @@ var Actresses = [
   170652,
   1234824,
   216119,
-  153410,
   79791,
   103078,
   4778,
@@ -56,6 +55,7 @@ function fetch_data(id){
         
         var actress = document.createElement('div')
         actress.setAttribute('class', 'actress')
+        actress.setAttribute('item_id', id)
         
         var img = document.createElement(`img`)
         img.setAttribute('src', profile_path)
@@ -98,6 +98,14 @@ function fetch_data(id){
         
         biography_el.innerHTML += birthday
         actress.appendChild(biography_el)
+        
+         var h5 = document.createElement('h5')
+        biography_el.appendChild(h5)
+        
+        var a = document.createElement('a')
+        a.setAttribute('href', `${PERSON_URL}${id}` )
+        a.innerHTML = 'Click here to visit this movie page on TMDB'
+        h5.appendChild(a)
         
         actress_list[name] = actress
         
