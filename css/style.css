@@ -201,6 +201,8 @@ li a:hover {
  }
 }
 
+
+
 @media screen and (min-width: 1034px) {
   /* @tablet screen */
   .cards-wrapper-index{
@@ -212,15 +214,16 @@ li a:hover {
  .cards-wrapper-index3{
   grid-template-columns:1fr 1fr 1fr;
  }
- 
- .cards-wrapper{
+
+}
+
+
+@media screen and (min-width: 1434px) {
+   .cards-wrapper{
    grid-template-columns:1fr 1fr 1fr;
  }
-  
-  .search{
-    width: 100%;
-  }
 }
+
 
 @media screen and (min-width: 1708px) {
 /* @desktop screen */
@@ -292,6 +295,7 @@ li a:hover {
   background-color: grey;
   position:relative;
   overflow: hidden;
+ 
   
 }
 
@@ -351,6 +355,7 @@ li a:hover {
  display: grid;
   padding: 10px;
   column-gap: 5px;
+  justify-content: center;
 }
 
 .actor{
@@ -423,6 +428,7 @@ li a:hover {
  display: grid;
   padding: 10px;
   column-gap: 5px;
+  justify-content: center;
 }
 
 .actress{
